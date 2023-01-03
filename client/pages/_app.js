@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import  {ToastContainer}  from 'react-toastify';
 import "react-toastify/dist/ReactToastify.min.css"
 import { Provider } from '../context';
+import Layout from '../components/layout/Layout';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -18,7 +19,9 @@ function MyApp({ Component, pageProps }) {
         pauseOnHover
         theme="light"
        />
-      <Component {...pageProps} />
+       <Layout >
+        <Component {...pageProps} />
+      </Layout>
     </Provider>
   )
 }
