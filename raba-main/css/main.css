@@ -1,0 +1,13 @@
+@font-face{
+    font-family:"iransansweb";
+    src: url(../font/IRANSansWeb.ttf) type="truetype";
+}
+.iransansweb{
+    font-family:iransansweb;
+}
+.bg-conic{
+    background: conic-gradient( #4F66E8 0 100%, #f5f5f5 0 100%);
+}
+.bg-conic2{
+    background: conic-gradient( #4F66E8 0 80%, #f5f5f5 0 100%);
+}
