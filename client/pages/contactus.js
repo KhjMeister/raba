@@ -9,7 +9,7 @@ export default function Contactus() {
         <main className="mx-auto max-w-7xl my-8">
             <div className="flex grid grid-cols-1 sm:grid-cols-2 md:grid-cols-7 mx-4 sm:mx-5 lg:mx-6 sm:gap-4 md:gap-6 lg:gap-16">
                 <div className="sm:order-last md:col-span-4">
-                    <h3
+                    <h3 style={{zIndex:'-999'}}
                         className="text-base font-extrabold block relative before:content{''} before:absolute before:right-0  before:top-9 before:h-1 before:w-32 before:bg-[#5269EA]">
                         ارسال درخواست</h3>
                     <form className="mt-8">
