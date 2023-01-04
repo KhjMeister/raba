@@ -26,7 +26,31 @@ const Samples = () => {
                     delay: 2500,
                     disableOnInteraction: false,
                   }}
-                
+                  breakpoints= {{
+                    // when window width is >= 320px
+                    240: {
+                        slidesPerView: 1,
+                        spaceBetween: 30
+                      },
+                    320: {
+                      slidesPerView: 1,
+                      spaceBetween: 30
+                    },
+                    // when window width is >= 480px
+                    480: {
+                      slidesPerView: 2,
+                      spaceBetween: 40
+                    },
+                    // when window width is >= 640px
+                    720: {
+                      slidesPerView: 3,
+                      spaceBetween: 50
+                    },
+                    10284: {
+                        slidesPerView: 4,
+                        spaceBetween: 50
+                      }
+                    }}
                 >
                 <SwiperSlide className='item bg-white p-5 font-bold rounded-md'>
                     <img src="../jpg/Dribbble shot HD - 1 2.png" className="w-80 mb-4" alt="shot" />
