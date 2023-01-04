@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
         theme="light"
        />
 
-<div dir={router.query?.locale == "fa" ? "rtl" : "ltr"}>
+    <div dir={router.query?.locale == "fa" ? "rtl" : "ltr"}>
         <Component {...pageProps} />
 
       </div>
