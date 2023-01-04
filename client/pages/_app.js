@@ -2,9 +2,13 @@ import '../styles/globals.css'
 import  {ToastContainer}  from 'react-toastify';
 import "react-toastify/dist/ReactToastify.min.css"
 import { Provider } from '../context';
-import Layout from '../components/layout/Layout';
+import { useRouter } from "next/router";
+
+import { appWithTranslation } from "next-i18next";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
   return (
     <Provider>
       <ToastContainer
@@ -19,11 +23,15 @@ function MyApp({ Component, pageProps }) {
         pauseOnHover
         theme="light"
        />
-       <Layout >
+
+<div dir={router.query?.locale == "fa" ? "rtl" : "ltr"}>
         <Component {...pageProps} />
-      </Layout>
+
+      </div>
+
+
     </Provider>
   )
 }
 
-export default MyApp
+export default appWithTranslation(MyApp)
