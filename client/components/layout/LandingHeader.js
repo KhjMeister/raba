@@ -1,14 +1,15 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
+
 const LandingHeader = () => {
    
     const router = useRouter();
-  
+
 
   return (
     <>
-      <header className="min-w-min sm:max-w-8xl mx-auto">
+      <header className="min-w-min sm:max-w-7xl mx-auto">
         <nav className="px-4 sm:px-4">
             <div className="bg-white mt-4 sm:mt-5 py-3 px-4 sm:px-6 rounded-md flex flex-wrap items-center relative">
                 <a className="flex flex-1 sm:flex-none cursor-pointer h-12" href="index.html"><img src="../jpg/raba2.png"

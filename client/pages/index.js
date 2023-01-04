@@ -9,11 +9,11 @@ import Services from '../components/common/Services';
 export default function Index() {
   return (
     <>
-        <div className='min-w-min sm:max-w-8xl mx-auto'>
+        <div className='min-w-min sm:max-w-7xl mx-auto'>
             <Hero />
         </div>
     
-        <main className="max-w-6xl mx-auto mt-18">
+        <main className="max-w-7xl mx-auto mt-18">
             <Feachers />
             <Samples />
             <Services />

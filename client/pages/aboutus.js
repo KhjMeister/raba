@@ -2,7 +2,7 @@
 export default function Aboutus() {
   return (
     <>
-        <div className='min-w-min sm:max-w-8xl mx-auto'>
+        <div className='min-w-min sm:max-w-7xl mx-auto'>
             
         </div>
     

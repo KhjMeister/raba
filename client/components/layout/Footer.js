@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <>
-    <footer className="max-w-8xl mx-auto mb-4 lg:mb-5">
+    <footer className="max-w-7xl mx-auto mb-4 lg:mb-5">
         <div className="bg-[#303030] p-4 mx-4 rounded-lg md:py-6">
             <div className="flex relative">
                 <a className="cursor-pointer mr-2">
