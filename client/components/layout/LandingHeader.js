@@ -69,10 +69,10 @@ const LandingHeader = () => {
                         </div>
                         <nav>
                           <ul className="space-y-4">
-                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-purple-400"><Link aria-label="Home" title="Home" href="/" className={router.pathname == "/" ? "text-[#4F66E8]" : ""}> خانه </Link></li>
-                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-purple-400"><Link aria-label="Nemone Kar" title="Nemone Kar" href="/" className={router.pathname == "/nemone" ? "text-[#4F66E8]" : ""}> نمونه کارها </Link></li>
-                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-purple-400"><Link aria-label="About Us" title="About Us"  href="/aboutus" className={router.pathname == "/aboutus" ? "text-[#4F66E8]" : ""}> درباره ما </Link></li>
-                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-purple-400"><Link aria-label="Contact Us" title="Contact Us"  href="/contactus" className={router.pathname == "/contactus" ? "text-[#4F66E8]" : ""}> ارتباط با ما  </Link></li>
+                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]"><Link aria-label="Home" title="Home" href="/" className={router.pathname == "/" ? "text-[#4F66E8]" : ""}> خانه </Link></li>
+                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]"><Link aria-label="Nemone Kar" title="Nemone Kar" href="/" className={router.pathname == "/nemone" ? "text-[#4F66E8]" : ""}> نمونه کارها </Link></li>
+                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]"><Link aria-label="About Us" title="About Us"  href="/aboutus" className={router.pathname == "/aboutus" ? "text-[#4F66E8]" : ""}> درباره ما </Link></li>
+                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]"><Link aria-label="Contact Us" title="Contact Us"  href="/contactus" className={router.pathname == "/contactus" ? "text-[#4F66E8]" : ""}> ارتباط با ما  </Link></li>
 
                             <li>
                               <a
