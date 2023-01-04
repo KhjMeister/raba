@@ -15,8 +15,8 @@ const LandingHeader = () => {
       <header className="min-w-min sm:max-w-7xl mx-auto">
         <nav className="px-4 sm:px-4">
             <div className="bg-white mt-4 sm:mt-5 py-3 px-4 sm:px-6 rounded-md flex flex-wrap items-center relative">
-                <a className="flex flex-1 sm:flex-none cursor-pointer h-12" href="index.html"><img src="../jpg/raba2.png"
-                        className="h-12 inline-block" alt="RABALOGO" /></a>
+                <Link className="flex flex-1 sm:flex-none cursor-pointer h-12" href="/"><img src="../jpg/raba2.png"
+                        className="h-12 inline-block" alt="RABALOGO" /></Link>
                 <button className="inline-flex tw-items-center ml-3 sm:hidden lg:hidden" onClick={()=>setMobileNavbar(!mobileNavbar)}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 7H19" stroke="#303030" strokeLinecap="round" />
