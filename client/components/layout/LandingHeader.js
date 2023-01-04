@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const LandingHeader = () => {
    
@@ -21,14 +22,14 @@ const LandingHeader = () => {
                 </button>
                 <div className="hidden sm:flex sm:flex-1">
                     <ul className="sm:flex flex-1 mr-10 sm:mr-7 md:mr-16 my-auto ">
-                        <li className="px-4 sm:px-3 md:px-6 text-sm active:text-[#FA7169]"><a href="index.html">خانه</a></li>
+                        <li className="px-4 sm:px-3 md:px-6 text-sm active:text-[#FA7169]"><Link href="/" className={router.pathname == "/" ? "text-[#4F66E8]" : ""}> خانه </Link></li>
                         <li className="px-4 sm:px-3 md:px-6 text-sm cursor-pointer transition-colorsn hover:text-[#4F66E8]">
-                            <a href="aboutus.html">نمونه کارها</a></li>
+                            <Link href="/" className={router.pathname == "/nemone" ? "text-[#4F66E8]" : ""}> نمونه کارها </Link></li>
                         <li className="px-4 sm:px-3 md:px-6 text-sm cursor-pointer transition-colorsn hover:text-[#4F66E8]">
-                            <a href="aboutus.html">درباره ما</a>
+                            <Link href="/aboutus" className={router.pathname == "/aboutus" ? "text-[#4F66E8]" : ""}> درباره ما </Link>
                         </li>
                         <li className="px-4 sm:px-3 md:px-6 text-sm cursor-pointer transition-colorsn hover:text-[#4F66E8]">
-                            <a href="contactus.html">ارتباط با ما</a>
+                            <Link href="/contactus" className={router.pathname == "/contactus" ? "text-[#4F66E8]" : ""}> ارتباط با ما  </Link>
                         </li>
                     </ul>
                     <a className="px-5 py-3.5 rounded-md text-sm text-white bg-[#4F66E8] flex flex-wrap transition-all cursor-pointer hover:bg-[#8993FF]"

@@ -4,3 +4,4 @@
 .env.production
 /.idea
 /.vscode
+/.next

@@ -13,7 +13,7 @@ export default function Index() {
             <Hero />
         </div>
     
-        <main className="max-w-8xl mx-auto mt-18">
+        <main className="max-w-6xl mx-auto mt-18">
             <Feachers />
             <Samples />
             <Services />
