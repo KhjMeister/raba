@@ -44,7 +44,7 @@ const LandingHeader = () => {
                 {!mobileNavbar ? (
                 <div className="hidden sm:flex sm:flex-1">
                     <ul className="sm:flex flex-1 mr-10 sm:mr-7 md:mr-16 my-auto ">
-                        <li className="px-4 sm:px-3 md:px-6 text-sm active:text-[#FA7169]">
+                        <li className="px-4 sm:px-3 md:px-6 text-sm cursor-pointer active:text-[#FA7169]">
                           <a onClick={home} className={router.pathname == "/[locale]" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "home")} </a>
                         </li>
                         <li className="px-4 sm:px-3 md:px-6 text-sm cursor-pointer transition-colorsn hover:text-[#4F66E8]">
@@ -103,20 +103,20 @@ const LandingHeader = () => {
                         </div>
                         <nav>
                           <ul className="space-y-4">
-                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]">
+                            <li className="font-medium cursor-pointer tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]">
                               <a aria-label="Home" title="Home" onClick={home} className={router.pathname == "/[locale]" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "home")} </a>
                               </li>
-                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]">
+                            <li className="font-medium cursor-pointer tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]">
                               <a aria-label="Nemone Kar" title="Nemone Kar" onClick={home} className={router.pathname == "/[locale]/nemone" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "samples")}</a>
                               </li>
-                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]">
+                            <li className="font-medium cursor-pointer tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]">
                               <a aria-label="About Us" title="About Us"  onClick={aboutus} className={router.pathname == "/[locale]/aboutus" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "aboutus")}</a>
                               </li>
-                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]">
+                            <li className="font-medium cursor-pointer tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]">
                               <a aria-label="Contact Us" title="Contact Us"  onClick={contactus} className={router.pathname == "/[locale]/contactus" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "contactus")} </a>
                               </li>
 
-                            <li className='font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]'>
+                            <li className='font-medium cursor-pointer tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]'>
                                 <div className="dropdown inline-block relative">
                                     <button className=" text-gray-700 font-semibold rounded inline-flex items-center">
                                         <span >{t(router.query?.locale, "language")}</span>

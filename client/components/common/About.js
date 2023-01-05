@@ -10,7 +10,7 @@ const About = () => {
     <>
      <section>
                 <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-center">  {t(router.query?.locale, "h3_about_raba")}</h3>
-                <p className="text-sm mt-7 leading-9 xl:leading-8 text-center xl:text-base mb-6">
+                <p className="text-sm mt-7 mr-6 ml-6 leading-9 xl:leading-8 text-center xl:text-base mb-6">
                 {t(router.query?.locale, "about_raba")}
                 </p>
             </section>

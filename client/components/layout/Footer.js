@@ -1,11 +1,28 @@
 import { useRouter } from 'next/router';
 import React from "react";
 import t from './../../lib/translate';
-import Link from 'next/link';
+import a from 'next/link';
 
 const Footer = () => {
         
-    const router = useRouter();
+    let locale = "fa";
+    if (localStorage.getItem("currentLocale") ) {
+      locale = localStorage.getItem("currentLocale");
+    }
+      const router = useRouter();
+  
+      const aboutus = (event) => {
+        event.preventDefault();
+        router.push('/'+locale+'/aboutus');
+      }
+      const home = (event) => {
+        event.preventDefault();
+        router.push('/'+locale);
+      }
+      const contactus = (event) => {
+        event.preventDefault();
+        router.push('/'+locale+'/contactus');
+      }
     return (
         <>
     <footer className="max-w-7xl mx-auto mb-4 lg:mb-5">
@@ -29,10 +46,10 @@ const Footer = () => {
                 <div>
                     <ul className="px-3">
                         <li className="font-medium text-white text-base pb-1"> {t(router.query?.locale, "fast_access")}</li>
-                        <li className="text-sm py-3"><Link href="/" className={router.pathname == "/[locale]" ? "text-white text-base" : "text-zinc-400"}> {t(router.query?.locale, "home")} </Link></li>
-                        <li className="text-sm py-3"> <Link href="/" className={router.pathname == "/[locale]/nemone" ? "text-white text-base" : "text-zinc-400"}> {t(router.query?.locale, "samples")}</Link></li>
-                        <li className="text-sm py-3"> <Link href="/aboutus" className={router.pathname == "/[locale]/aboutus" ? "text-white text-base" : "text-zinc-400"}> {t(router.query?.locale, "aboutus")}</Link></li>
-                        <li className="text-sm py-3"><Link href="/contactus" className={router.pathname == "/[locale]/contactus" ? "text-white text-base" : "text-zinc-400"}> {t(router.query?.locale, "contactus")} </Link> </li>
+                        <li className="text-sm py-3 cursor-pointer"><a onClick={home} className={router.pathname == "/[locale]" ? "text-white text-base" : "text-zinc-400"}> {t(router.query?.locale, "home")} </a></li>
+                        <li className="text-sm py-3 cursor-pointer"> <a onClick={home} className={router.pathname == "/[locale]/nemone" ? "text-white text-base" : "text-zinc-400"}> {t(router.query?.locale, "samples")}</a></li>
+                        <li className="text-sm py-3 cursor-pointer"> <a onClick={aboutus} className={router.pathname == "/[locale]/aboutus" ? "text-white text-base" : "text-zinc-400"}> {t(router.query?.locale, "aboutus")}</a></li>
+                        <li className="text-sm py-3 cursor-pointer"><a onClick={contactus} className={router.pathname == "/[locale]/contactus" ? "text-white text-base" : "text-zinc-400"}> {t(router.query?.locale, "contactus")} </a> </li>
                     </ul>
                 </div>
                 <div className="sm:col-span-2 lg:col-span-1">
