@@ -1,17 +1,17 @@
-import React from 'react';
-
+import { useRouter } from 'next/router';
+import React from "react";
+import t from './../../lib/translate';
+import Link from 'next/link';
 const Services = () => {
+    const router = useRouter();
     return (
         <>
          <section className="mx-4 md:mx-5 lg:mx-6 mb-12">
             <div className="flex grid grid-cols-1 sm:grid-cols-2">
                 <div className="mb-7">
-                    <h3 className="font-bold text-xl mb-4">چرا شرکت مارو انتخاب کنید؟</h3>
+                    <h3 className="font-bold text-xl mb-4"> {t(router.query?.locale, "why_us")} </h3>
                     <p className="text-sm text[#303030] leading-8">
-                        ما با داشتن یک تیم حرفه ای با تجربه و با انجام پروژه به صورت اصولی وبا برنامه ریزی سعی کرده تا
-                        بهترین خدمات رو به مشتریان خود را اراِئه دهد
-                        <br />
-                        تیم شرکت رابا دارای افرادی با وژگی های منحصر به فرد که باعث شده تیمی بسیار قدرتمند را تشکیل داده
+                    {t(router.query?.locale, "p_why_us")}
                     </p>
                     <ul className="text-sm text[#303030]">
                         <li className="my-4">
@@ -27,7 +27,7 @@ const Services = () => {
                                         fill="white" />
                                 </svg>
                             </span>
-                            ارائه خدمات یکپارچه
+                            {t(router.query?.locale, "providing_integrated_services")}
                         </li>
                         <li className="my-4">
                             <span
@@ -42,7 +42,7 @@ const Services = () => {
                                         fill="white" />
                                 </svg>
                             </span>
-                            دارای تیم مدیریت پروژه
+                            {t(router.query?.locale, "has_a_project_management_team")}
                         </li>
                         <li className="my-4">
                             <span
@@ -57,7 +57,7 @@ const Services = () => {
                                         fill="white" />
                                 </svg>
                             </span>
-                            تجربه بالا
+                            {t(router.query?.locale, "high_experience")}
                         </li>
                         <li className="my-4">
                             <span
@@ -72,7 +72,7 @@ const Services = () => {
                                         fill="white" />
                                 </svg>
                             </span>
-                            استفاده از جدیدترین متد های برنامه نویسی
+                            {t(router.query?.locale, "using_the_latest_programming_methods")}
                         </li>
                         <li className="my-4">
                             <span
@@ -87,12 +87,12 @@ const Services = () => {
                                         fill="white" />
                                 </svg>
                             </span>
-                            پاسخگویی به سوالات و چالش های شما
+                            {t(router.query?.locale, "answering_your_questions_and_challenges")}
                         </li>
                     </ul>
                 </div>
                 <div className="sm:mr-4 md:mr-6 lg:mr-20">
-                    <h3 className="font-bold text-xl text-center mb-6">مهارت ها</h3>
+                    <h3 className="font-bold text-xl text-center mb-6"> {t(router.query?.locale, "skills")}</h3>
                     <div className="flex grid grid-cols-2 gap-4">
                         <div className="bg-white p-4 text-center place-items-center rounded-md">
                             <span

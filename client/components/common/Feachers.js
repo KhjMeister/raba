@@ -1,12 +1,19 @@
-import React from 'react';
+import { useRouter } from 'next/router';
+import React from "react";
+import t from './../../lib/translate';
+import Link from 'next/link';
 
 const Feachers = () => {
+    const router = useRouter();
     return (
         <>
             <section className="mx-4 md:mx-5 lg:mx-6 mb-16">
                 <h3 className="h-16 mt-12 md:h-20  text-center font-bold text-xl md:text-3xl relative before:content{' '} before:absolute before:h-1.5 before:w-48 before:bg-[#4F66E8] before:left-0 before:right-5 before:mx-auto before:bottom-[22px]
                 after:content{''} after:mx-auto after:left-[30px] after:right-0 after:h-1.5 after:w-48 after:bg-[#8993FF] after:absolute after:bottom-[10px]
-                ">ویژگی های رابا</h3>
+                ">
+                    {t(router.query?.locale, "raba_features")}
+                    
+                </h3>
                 <div className="flex grid grid-cols-1 sm:grid-cols-2 mt-3">
                     <div className="align-center self-center">
                         <ul className="text-sm sm:text-xs md:text-sm mt-7 lg:mt-12 md:pl-8 lg:pl-36 font-medium">
@@ -22,7 +29,7 @@ const Feachers = () => {
                                         stroke="white" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round"
                                         strokeLinejoin="round" />
                                 </svg>
-                                سرعت بالا
+                                {t(router.query?.locale, "hight_speed")}
                             </li>
                             <li className="bg-white text-[#303030] rounded-md px-4 py-3 mt-4 lg:mt-5">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -38,7 +45,7 @@ const Feachers = () => {
                                         stroke="#292D32" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round"
                                         strokeLinejoin="round" />
                                 </svg>
-                                استفاده از جدیدترین متدهای برنامه نویسی
+                                {t(router.query?.locale, "lates")}
                             </li>
                             <li className="bg-white text-[#303030] rounded-md px-4 py-3 mt-4 lg:mt-5">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -54,7 +61,7 @@ const Feachers = () => {
                                         strokeLinejoin="round" />
                                 </svg>
 
-                                مدیریت پروژه
+                                {t(router.query?.locale, "project_managment")}
                             </li>
                             <li className="bg-white text-[#303030] rounded-md px-4 py-3 mt-4 lg:mt-5">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -75,7 +82,7 @@ const Feachers = () => {
                                         strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
 
-                                برنامه ریزی
+                                {t(router.query?.locale, "planing")}
                             </li>
                             <li className="bg-white text-[#303030] rounded-md px-4 py-3 mt-4 lg:mt-5">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -108,7 +115,7 @@ const Feachers = () => {
                                         strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
 
-                                طراحی با اصول ui ux
+                                {t(router.query?.locale, "design_principles")}
                             </li>
                             <li className="bg-white text-[#303030] rounded-md px-4 py-3 mt-4 lg:mt-5">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -128,7 +135,7 @@ const Feachers = () => {
                                         strokeLinejoin="round" />
                                 </svg>
 
-                                طراحی زیبا و خلاقانه
+                                {t(router.query?.locale, "beautiful_desgn")}
                             </li>
                             <li className="bg-white text-[#303030] rounded-md px-4 py-3 mt-4 lg:mt-5">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -141,11 +148,11 @@ const Feachers = () => {
                                         stroke="#292D32" strokeWidth="1.5" strokeLinecap="round"
                                         strokeLinejoin="round" />
                                 </svg>
-                                مدیریت زمان
+                                {t(router.query?.locale, "time_managment")}
                             </li>
                         </ul>
                     </div>
-                    <div dir="ltr" className="order-first sm:order-last">
+                    <div  className="order-first sm:order-last">
                         <img src="../jpg/feature.png" className="w-4/4 sm:w-full md:w-4/4 lg:w-5/6 xl:3/4" alt="feature" />
                     </div>
                 </div>
