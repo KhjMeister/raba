@@ -79,5 +79,28 @@
   "p_email": "Pls enter your email !",
   "p_description": "Pls enter your description !",
   "b_send": "Send",
-  "connection_text": "For consultation, you can contact us in the following ways, and to send a ticket, our consultants will respond to you 24 hours a day."
+  "connection_text": "For consultation, you can contact us in the following ways, and to send a ticket, our consultants will respond to you 24 hours a day.",
+  "about_raba": "The Raba company was established in 1401 with the aim of developing application software and website design, and the Raba team was able to create business by starting two startups. The Raba team has people with experience and expertise in the field of web and application, and has tried to provide the best services We also keep pace with the world's standards and use the latest methods and technology",
+  "h3_about_raba": "About RABA",
+  "h3_raba_services": "RABA services",
+  "p_create_web": "Website and web app design",
+  "p_create_app": "Mobile application design",
+  "p_create_platform": "Business platform design",
+  "h3_raba_members": "RABA team members",
+  "view_resume": "View resume",
+
+  "front_end": "Front End developer",
+  "back_end": "Back End developer",
+  "ui_ux": "Ui UX Designer",
+  "android": "Android developer",
+  "full_stack": "Full Stack developer",
+  "wordpress": "Wordpress developer",
+
+  "khaled":"Khaled Jamal",
+  "khosru":"Khosru Rasuli",
+  "hamid":"Hamd Balalzade",
+  "zakie":"Zakie Khosravi",
+  "shabani":"Shahroz Shaibani",
+  "sarhadi":"Saiede Sarhadi",
+  "riki":"Ali Riki"
 }
