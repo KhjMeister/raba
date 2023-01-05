@@ -96,11 +96,15 @@
   "full_stack": "Full Stack developer",
   "wordpress": "Wordpress developer",
 
-  "khaled":"Khaled Jamal",
-  "khosru":"Khosru Rasuli",
-  "hamid":"Hamd Balalzade",
-  "zakie":"Zakie Khosravi",
-  "shabani":"Shahroz Shaibani",
-  "sarhadi":"Saiede Sarhadi",
-  "riki":"Ali Riki"
+  "khaled": "Khaled Jamal",
+  "khosru": "Khosru Rasuli",
+  "hamid": "Hamd Balalzade",
+  "zakie": "Zakie Khosravi",
+  "shabani": "Shahroz Shaibani",
+  "sarhadi": "Saiede Sarhadi",
+  "riki": "Ali Riki",
+
+  "project_request": "Request a priject",
+  "h3_hero": "Every business needs a website and application",
+  "p_hero": "In order to introduce your business to others, you need a website. If you have a store, the best way to sell your products or services is through the website and application."
 }
