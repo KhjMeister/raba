@@ -1,6 +1,11 @@
-import React from 'react';
+import { useRouter } from 'next/router';
+import React from "react";
+import t from './../../lib/translate';
+import Link from 'next/link';
 
 const Footer = () => {
+        
+    const router = useRouter();
     return (
         <>
     <footer className="max-w-7xl mx-auto mb-4 lg:mb-5">
@@ -21,16 +26,16 @@ const Footer = () => {
             <div className="flex grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
                 <div>
                     <ul className="px-3">
-                        <li className="font-medium text-white text-base pb-1">دسترسی های سریع</li>
-                        <li className="text-sm text-zinc-400 py-3">خانه</li>
-                        <li className="text-sm text-zinc-400 py-3">نمونه کارها</li>
-                        <li className="text-sm text-zinc-400 py-3">درباره ما</li>
-                        <li className="text-sm text-zinc-400 py-3">ارتباط با ما</li>
+                        <li className="font-medium text-white text-base pb-1"> {t(router.query?.locale, "fast_access")}</li>
+                        <li className="text-sm py-3"><Link href="/" className={router.pathname == "/[locale]" ? "text-white text-base" : "text-zinc-400"}> {t(router.query?.locale, "home")} </Link></li>
+                        <li className="text-sm py-3"> <Link href="/" className={router.pathname == "/[locale]/nemone" ? "text-white text-base" : "text-zinc-400"}> {t(router.query?.locale, "samples")}</Link></li>
+                        <li className="text-sm py-3"> <Link href="/aboutus" className={router.pathname == "/[locale]/aboutus" ? "text-white text-base" : "text-zinc-400"}> {t(router.query?.locale, "aboutus")}</Link></li>
+                        <li className="text-sm py-3"><Link href="/contactus" className={router.pathname == "/[locale]/contactus" ? "text-white text-base" : "text-zinc-400"}> {t(router.query?.locale, "contactus")} </Link> </li>
                     </ul>
                 </div>
                 <div className="sm:col-span-2 lg:col-span-1">
                     <ul className="px-3">
-                        <li className="font-medium text-white text-base pb-1">راه های ارتباطی</li>
+                        <li className="font-medium text-white text-base pb-1">{t(router.query?.locale, "connection_ways")} </li>
                         <li className="text-sm text-zinc-400 py-3">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" className="inline-block align-[-6px] ml-2">
@@ -38,7 +43,7 @@ const Footer = () => {
                                     d="M20 17.064C20 17.352 19.9359 17.648 19.7997 17.936C19.6635 18.224 19.4872 18.496 19.2549 18.752C18.8623 19.184 18.4296 19.496 17.9409 19.696C17.4602 19.896 16.9394 20 16.3786 20C15.5613 20 14.688 19.808 13.7666 19.416C12.8453 19.024 11.9239 18.496 11.0105 17.832C10.0891 17.16 9.21582 16.416 8.38257 15.592C7.55734 14.76 6.81222 13.888 6.14722 12.976C5.49024 12.064 4.96144 11.152 4.57687 10.248C4.19229 9.336 4 8.464 4 7.632C4 7.088 4.09614 6.568 4.28843 6.088C4.48072 5.6 4.78518 5.152 5.20981 4.752C5.72258 4.248 6.28343 4 6.87631 4C7.10065 4 7.32499 4.048 7.52529 4.144C7.7336 4.24 7.91788 4.384 8.06209 4.592L9.92088 7.208C10.0651 7.408 10.1693 7.592 10.2414 7.768C10.3135 7.936 10.3535 8.104 10.3535 8.256C10.3535 8.448 10.2974 8.64 10.1853 8.824C10.0811 9.008 9.92889 9.2 9.7366 9.392L9.12769 10.024C9.03956 10.112 8.9995 10.216 8.9995 10.344C8.9995 10.408 9.00751 10.464 9.02354 10.528C9.04757 10.592 9.07161 10.64 9.08763 10.688C9.23185 10.952 9.48022 11.296 9.83275 11.712C10.1933 12.128 10.5779 12.552 10.9945 12.976C11.4271 13.4 11.8438 13.792 12.2684 14.152C12.685 14.504 13.0295 14.744 13.302 14.888C13.342 14.904 13.3901 14.928 13.4462 14.952C13.5103 14.976 13.5744 14.984 13.6465 14.984C13.7827 14.984 13.8868 14.936 13.975 14.848L14.5839 14.248C14.7842 14.048 14.9765 13.896 15.1607 13.8C15.345 13.688 15.5293 13.632 15.7296 13.632C15.8818 13.632 16.0421 13.664 16.2183 13.736C16.3946 13.808 16.5789 13.912 16.7792 14.048L19.4311 15.928C19.6395 16.072 19.7837 16.24 19.8718 16.44C19.9519 16.64 20 16.84 20 17.064Z"
                                     stroke="#CCCCCC" strokeMiterlimit="10" />
                             </svg>
-                            09338973928
+                            {t(router.query?.locale, "number")}
                         </li>
                         <li className="text-sm text-zinc-400 py-3">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -47,7 +52,7 @@ const Footer = () => {
                                 <path d="M4 9L11.1056 12.5528C11.6686 12.8343 12.3314 12.8343 12.8944 12.5528L20 9"
                                     stroke="#CCCCCC" />
                             </svg>
-                            RABA@GMAIL.COM
+                            {t(router.query?.locale, "email")}
                         </li>
                         <li className="text-sm text-zinc-400 py-3 leading-8">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -59,8 +64,7 @@ const Footer = () => {
                                     d="M11.9026 5.5C9.13087 5.49813 6.40885 7.10869 5.68188 10.304C4.82371 14.0957 7.17465 17.3711 9.35787 19.4754C10.7813 20.8421 13.0194 20.8408 14.4335 19.4759L14.4344 19.4751C16.6256 17.3709 18.9763 14.1033 18.118 10.3117L18.118 10.3117C17.3948 7.11624 14.6745 5.50188 11.9026 5.5ZM19.0933 10.0909C18.2481 6.35663 15.0509 4.50213 11.9033 4.5C8.75565 4.49787 5.55623 6.34812 4.70675 10.0824L4.70664 10.0829C3.7246 14.4209 6.43056 18.0429 8.66428 20.1957L8.66491 20.1963C10.474 21.9338 13.3244 21.9353 15.127 20.1964C17.3689 18.0435 20.0754 14.4294 19.0933 10.0909Z"
                                     fill="#CCCCCC" />
                             </svg>
-                            زاهدان خیابان دانشگاه پارک علم فناوری
-                            شرکت رابا
+                            {t(router.query?.locale, "address")}
                         </li>
                         <ul className="mt-2">
                             <li
@@ -101,27 +105,27 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="sm:col-span-3 md:col-span-2 lg:col-span-2">
-                    <h3 className="m-0 px-3 text-base text-white">درخواست مشاوره</h3>
+                    <h3 className="m-0 px-3 text-base text-white"> {t(router.query?.locale, "counseling_request")}</h3>
                     <form className="px-3 mt-4">
                         <div className="flex flex-row grid grid-cols-1 lg:grid-cols-2 lg:gap-4 lg:mb-4">
                             <div>
-                                <label className="text-zinc-400 text-sm">نام و نام خانوادگی</label>
+                                <label className="text-zinc-400 text-sm">{t(router.query?.locale, "i_name_family")} </label>
                                 <input type="text"
                                     className="w-full border border-1 border-zinc-500 bg-[#303030] rounded h-9 mt-2 placeholder:text-xs placeholder:text-zinc-500 px-3 focus:outline-none focus:ring-1 focus:ring-sky-800 focus:border-sky-500 text-white text-sm"
-                                    placeholder="نام و نام خانوادگی خود را وارد نمایید" />
+                                    placeholder={t(router.query?.locale, "p_name_family")} />
                             </div>
                             <div className="my-4 lg:my-0">
-                                <label className="text-zinc-400 text-sm">ایمیل</label>
+                                <label className="text-zinc-400 text-sm">{t(router.query?.locale, "i_email")}</label>
                                 <input type="email"
                                     className="w-full border border-1 border-zinc-500 bg-[#303030] rounded h-9 mt-2 placeholder:text-xs placeholder:text-zinc-500 px-3 focus:outline-none focus:ring-1 focus:ring-sky-800 focus:border-sky-500 text-white text-sm"
-                                    placeholder="ایمیل خود را وارد نمایید" />
+                                    placeholder={t(router.query?.locale, "p_email")} />
 
                             </div>
                         </div>
-                        <label className="text-zinc-400 text-sm">توضیحات درخواست</label>
+                        <label className="text-zinc-400 text-sm">{t(router.query?.locale, "i_description")}  </label>
                         <textarea type="text"
                             className="resize-none pt-3 w-full border border-1 border-zinc-500 bg-[#303030] rounded h-20 mt-2 placeholder:text-xs placeholder:text-zinc-500 px-3 focus:outline-none focus:ring-1 focus:ring-sky-800 focus:border-sky-500 text-white text-sm"
-                            placeholder="توضیحات خود را وارد نمایید"></textarea>
+                            placeholder={t(router.query?.locale, "p_description")}></textarea>
                         <button
                             className="w-full sm:w-80 lg:w-60 bg-[#4F66E8] text-white rounded text-center h-10 mt-5 text-sm">ارسال</button>
                     </form>
