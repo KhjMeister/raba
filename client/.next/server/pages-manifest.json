@@ -2,7 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/[locale]/aboutus": "pages/[locale]/aboutus.js",
-  "/contactus": "pages/contactus.js",
   "/[locale]/contactus": "pages/[locale]/contactus.js"
 }

@@ -14,7 +14,7 @@ const Footer = () => {
                 <a className="cursor-pointer mr-2">
                     <img src="../jpg/rabadark2.png" className="h-9" alt="rabadark" />
                 </a>
-                <span className="block border border-2 border-[#8993FF] rounded-md w-9 h-9 absolute left-2">
+                <span className={router.query?.locale == 'fa' ? 'block border border-2 border-[#8993FF] rounded-md w-9 h-9 absolute left-2' : 'block border border-2 border-[#8993FF] rounded-md w-9 h-9 absolute right-2'}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                         className="my-1 mx-auto">
                         <path d="M19.92 15.0501L13.4 8.53014C12.63 7.76014 11.37 7.76014 10.6 8.53014L4.07996 15.0501"
@@ -22,6 +22,8 @@ const Footer = () => {
                             strokeLinejoin="round" />
                     </svg>
                 </span>
+             
+                
             </div>
             <div className="flex grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
                 <div>
@@ -127,7 +129,7 @@ const Footer = () => {
                             className="resize-none pt-3 w-full border border-1 border-zinc-500 bg-[#303030] rounded h-20 mt-2 placeholder:text-xs placeholder:text-zinc-500 px-3 focus:outline-none focus:ring-1 focus:ring-sky-800 focus:border-sky-500 text-white text-sm"
                             placeholder={t(router.query?.locale, "p_description")}></textarea>
                         <button
-                            className="w-full sm:w-80 lg:w-60 bg-[#4F66E8] text-white rounded text-center h-10 mt-5 text-sm">ارسال</button>
+                            className="w-full sm:w-80 lg:w-60 bg-[#4F66E8] text-white rounded text-center h-10 mt-5 text-sm">{t(router.query?.locale, "b_send")}</button>
                     </form>
                 </div>
             </div>
