@@ -4,6 +4,7 @@ import t from './../../lib/translate';
 import Link from 'next/link';
 const Services = () => {
     const router = useRouter();
+    
     return (
         <>
          <section className="mx-4 md:mx-5 lg:mx-6 mb-12">

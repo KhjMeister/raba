@@ -21,8 +21,9 @@ const Samples = () => {
                     ">
                      {t(router.query?.locale, "samples")}
                 </h3>
+                
             <Swiper
-                className="owl-carousel owl-theme mt-5"
+                className=" mt-5"
                 modules={[Navigation,Autoplay, A11y]}
                 spaceBetween={50}
                 slidesPerView={3}
@@ -57,7 +58,7 @@ const Samples = () => {
                       }
                     }}
                 >
-                <SwiperSlide className='item bg-white p-5 font-bold rounded-md'>
+                <SwiperSlide dir={router.query?.locale == 'fa' ? 'rtl' : 'ltr'} className='item bg-white p-5 font-bold rounded-md'>
                     <img src="../jpg/Dribbble shot HD - 1 2.png" className="w-80 mb-4" alt="shot" />
                     <p className="text-base text-center">
                     {t(router.query?.locale, "cafeiran")}
