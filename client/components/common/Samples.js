@@ -45,16 +45,16 @@ const Samples = () => {
                     // when window width is >= 480px
                     480: {
                       slidesPerView: 2,
-                      spaceBetween: 40
+                      spaceBetween: 50
                     },
                     // when window width is >= 640px
                     720: {
                       slidesPerView: 3,
-                      spaceBetween: 50
+                      spaceBetween: 60
                     },
                     10284: {
                         slidesPerView: 4,
-                        spaceBetween: 50
+                        spaceBetween: 70
                       }
                     }}
                 >

@@ -6,18 +6,34 @@ import Link from 'next/link';
 
 
 const LandingHeader = () => {
+  let locale = "fa";
+  if (localStorage.getItem("currentLocale") ) {
+    locale = localStorage.getItem("currentLocale");
+  }
     const [mobileNavbar, setMobileNavbar] = useState(false);
     
     const router = useRouter();
 
+    const aboutus = (event) => {
+      event.preventDefault();
+      router.push('/'+locale+'/aboutus');
+    }
+    const home = (event) => {
+      event.preventDefault();
+      router.push('/'+locale);
+    }
+    const contactus = (event) => {
+      event.preventDefault();
+      router.push('/'+locale+'/contactus');
+    }
 
   return (
     <>
       <header className="min-w-min sm:max-w-7xl mx-auto">
         <nav className="px-4 sm:px-4">
             <div className="bg-white mt-4 sm:mt-5 py-3 px-4 sm:px-6 rounded-md flex flex-wrap items-center relative">
-                <Link className="flex flex-1 sm:flex-none cursor-pointer h-12" href="/"><img src="../jpg/raba2.png"
-                        className="h-12 inline-block" alt="RABALOGO" /></Link>
+                <a className="flex flex-1 sm:flex-none cursor-pointer h-12" onClick={home}><img src="../jpg/raba2.png"
+                        className="h-12 inline-block" alt="RABALOGO" /></a>
                 <button className="inline-flex tw-items-center ml-3 sm:hidden lg:hidden" onClick={()=>setMobileNavbar(!mobileNavbar)}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 7H19" stroke="#303030" strokeLinecap="round" />
@@ -28,14 +44,17 @@ const LandingHeader = () => {
                 {!mobileNavbar ? (
                 <div className="hidden sm:flex sm:flex-1">
                     <ul className="sm:flex flex-1 mr-10 sm:mr-7 md:mr-16 my-auto ">
-                        <li className="px-4 sm:px-3 md:px-6 text-sm active:text-[#FA7169]"><Link href="/" className={router.pathname == "/[locale]" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "home")} </Link></li>
-                        <li className="px-4 sm:px-3 md:px-6 text-sm cursor-pointer transition-colorsn hover:text-[#4F66E8]">
-                            <Link href="/" className={router.pathname == "/[locale]/nemone" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "samples")}</Link></li>
-                        <li className="px-4 sm:px-3 md:px-6 text-sm cursor-pointer transition-colorsn hover:text-[#4F66E8]">
-                            <Link href="/aboutus" className={router.pathname == "/[locale]/aboutus" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "aboutus")}</Link>
+                        <li className="px-4 sm:px-3 md:px-6 text-sm active:text-[#FA7169]">
+                          <a onClick={home} className={router.pathname == "/[locale]" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "home")} </a>
                         </li>
                         <li className="px-4 sm:px-3 md:px-6 text-sm cursor-pointer transition-colorsn hover:text-[#4F66E8]">
-                            <Link href="/contactus" className={router.pathname == "/[locale]/contactus" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "contactus")} </Link>
+                            <a onClick={home}  className={router.pathname == "/[locale]/nemone" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "samples")}</a>
+                        </li>
+                        <li className="px-4 sm:px-3 md:px-6 text-sm cursor-pointer transition-colorsn hover:text-[#4F66E8]">
+                            <a onClick={aboutus} className={router.pathname == "/[locale]/aboutus" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "aboutus")}</a>
+                        </li>
+                        <li className="px-4 sm:px-3 md:px-6 text-sm cursor-pointer transition-colorsn hover:text-[#4F66E8]">
+                            <a onClick={contactus}  className={router.pathname == "/[locale]/contactus" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "contactus")} </a>
                         </li>
                         <li className='px-4 sm:px-3 md:px-6 text-sm cursor-pointer transition-colorsn hover:text-[#4F66E8]'>
                             <div className="dropdown inline-block relative">
@@ -68,8 +87,8 @@ const LandingHeader = () => {
                       <div className="p-5 bg-white dark:bg-gray-800 border rounded shadow-sm">
                         <div className="flex items-center justify-between mb-4">
                           <div >
-                          <Link className="flex flex-1 sm:flex-none cursor-pointer h-12" href="/"><img src="../jpg/raba2.png"
-                        className="h-12 inline-block" alt="RABALOGO" /></Link>
+                          <a className="flex flex-1 sm:flex-none cursor-pointer h-12" onClick={home}><img src="../jpg/raba2.png"
+                        className="h-12 inline-block" alt="RABALOGO" /></a>
                           </div>
                           <div>
                             <button onClick={()=>setMobileNavbar(!mobileNavbar)} aria-label="Close Menu" title="Close Menu" className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
@@ -84,10 +103,18 @@ const LandingHeader = () => {
                         </div>
                         <nav>
                           <ul className="space-y-4">
-                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]"><Link aria-label="Home" title="Home" href="/" className={router.pathname == "/[locale]" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "home")} </Link></li>
-                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]"><Link aria-label="Nemone Kar" title="Nemone Kar" href="/" className={router.pathname == "/[locale]/nemone" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "samples")}</Link></li>
-                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]"><Link aria-label="About Us" title="About Us"  href="/aboutus" className={router.pathname == "/[locale]/aboutus" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "aboutus")}</Link></li>
-                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]"><Link aria-label="Contact Us" title="Contact Us"  href="/contactus" className={router.pathname == "/[locale]/contactus" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "contactus")} </Link></li>
+                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]">
+                              <a aria-label="Home" title="Home" onClick={home} className={router.pathname == "/[locale]" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "home")} </a>
+                              </li>
+                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]">
+                              <a aria-label="Nemone Kar" title="Nemone Kar" onClick={home} className={router.pathname == "/[locale]/nemone" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "samples")}</a>
+                              </li>
+                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]">
+                              <a aria-label="About Us" title="About Us"  onClick={aboutus} className={router.pathname == "/[locale]/aboutus" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "aboutus")}</a>
+                              </li>
+                            <li className="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]">
+                              <a aria-label="Contact Us" title="Contact Us"  onClick={contactus} className={router.pathname == "/[locale]/contactus" ? "text-[#4F66E8]" : ""}> {t(router.query?.locale, "contactus")} </a>
+                              </li>
 
                             <li className='font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-[#4F66E8]'>
                                 <div className="dropdown inline-block relative">
