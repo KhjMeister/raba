@@ -78,5 +78,6 @@
   "p_name_family": "Pls enter your first and last name !",
   "p_email": "Pls enter your email !",
   "p_description": "Pls enter your description !",
-  "b_send": "Send"
+  "b_send": "Send",
+  "connection_text": "For consultation, you can contact us in the following ways, and to send a ticket, our consultants will respond to you 24 hours a day."
 }
